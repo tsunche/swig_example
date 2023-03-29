@@ -1,3 +1,7 @@
 *.so
 *.o
 *.class
+
+example.java
+exampleJNI.java
+example_wrap.c

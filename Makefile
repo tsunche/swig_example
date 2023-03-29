@@ -3,7 +3,7 @@ all: run
 example.java exampleJNI.java example_wrap.c: example.i
 	swig -java example.i
 
-example.o example_wrap.o: example.c example_wrap.c
+example.o example_wrap.o: example.c example.h example_wrap.c
 	gcc -I /usr/lib/jvm/default-java/include -I /usr/lib/jvm/default-java/include/linux -fpic -c example.c example_wrap.c
 
 libexample.so: example.o example_wrap.o
